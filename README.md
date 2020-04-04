@@ -16,6 +16,10 @@ ___
 
 ## Road Map
 
+* Build Design Language (playful, but accessible)
+
 * Create parent accounts with the option of adding multiple children
 
 * Build out a point system with customized rewards
+
+* Typescript conversion(?)
