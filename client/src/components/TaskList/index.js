@@ -1,14 +1,18 @@
 import React, { useContext } from "react";
 import { TaskContext } from "../../context/TasksContext";
+import { TaskTitle, TaskListContainer, TaskButton } from "../StyledComponents";
 
 const TaskList = () => {
   const { tasks } = useContext(TaskContext);
   return (
-    <div>
-      {tasks.map(({ id, task }) => (
-        <button key={id}>{task}</button>
-      ))}
-    </div>
+    <>
+      <TaskTitle>EZ's Morning Routine</TaskTitle>
+      <TaskListContainer>
+        {tasks.map(({ id, task }) => (
+          <TaskButton key={id}>{task}</TaskButton>
+        ))}
+      </TaskListContainer>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { TaskContext } from "../../context/TasksContext";
+import { TaskInput } from "../StyledComponents";
 
 const AddTask = () => {
   const { addTask } = useContext(TaskContext);
@@ -14,7 +15,7 @@ const AddTask = () => {
   };
   return (
     <form onSubmit={submitTask}>
-      <input
+      <TaskInput
         type="text"
         value={newTask}
         onChange={e => setNewTask(e.target.value)}
