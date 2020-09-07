@@ -26,3 +26,5 @@ Route::get('/register', function () {
 });
 
 Route::get('/tasks', 'TasksController@show');
+
+Route::post('/tasks', 'TasksController@create');

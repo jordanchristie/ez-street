@@ -8,7 +8,7 @@
 <form method="POST" class="form-horizontal">
 {{ csrf_field() }}
     <div class="form-group row">
-        <input type="text" placeholder="New task">
+        <input type="text" placeholder="New task" name="newTask" class="form-control w-50">
         <input type="submit" value="Add" class="btn btn-primary ml-3">
     </div>
 </form>

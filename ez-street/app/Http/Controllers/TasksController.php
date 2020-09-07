@@ -26,4 +26,15 @@ class TasksController extends Controller
 
         return view('tasks', ['tasks' => $tasks, 'greeting' => $greeting]);
     }
+
+    public function create(Request $request) {
+        $newTask = $request->input('newTask');
+        $tasks = array('wash the car', 'feed the cat', 'feed the cat to the dog');
+        
+        $greeting = $this->getGreeting();
+
+        array_push($tasks, $newTask);
+
+        return view('tasks', ['tasks' => $tasks, 'greeting' => $greeting]);
+    }
 }
