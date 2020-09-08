@@ -37,4 +37,16 @@ class TasksController extends Controller
 
         return view('tasks', ['tasks' => $tasks, 'greeting' => $greeting]);
     }
+
+    public function update(Request $request) {
+        $updatedTask = $request->input('updatedTask');
+
+        $greeting = $this->getGreeting();
+
+    }
+
+    public function delete(Request $request) {
+
+    }
+        
 }

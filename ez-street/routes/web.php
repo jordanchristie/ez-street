@@ -28,3 +28,6 @@ Route::get('/register', function () {
 Route::get('/tasks', 'TasksController@show');
 
 Route::post('/tasks', 'TasksController@create');
+
+Route::post('/tasks/{id}', 'TasksController@delete');
+
