@@ -25,9 +25,15 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::post('/register', 'UserController@create');
+
 Route::get('/tasks', 'TasksController@show');
 
 Route::post('/tasks', 'TasksController@create');
 
 Route::post('/tasks/{id}', 'TasksController@delete');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
